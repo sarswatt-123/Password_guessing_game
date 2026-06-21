@@ -1,46 +1,51 @@
-# 🎯 Number Guessing Game GUI (Python Tkinter)
+# 🎯 Number Guessing Game GUI
 
-A simple and interactive **Number Guessing Game** built using **Python** and **Tkinter GUI**. The computer randomly selects a number between **1 to 100**, and the player has to guess the correct number with the help of hints.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+
+A simple and interactive **Number Guessing Game** built using **Python and Tkinter**.  
+The computer generates a random number between **1 and 100**, and the player has to guess the correct number with the help of hints.
 
 ---
 
-## 📸 Project Preview
+## 📌 Project Overview
+
+This project provides a graphical user interface where users can enter their guesses and receive instant feedback.
+
+- 📉 Shows a message if the guessed number is too low.
+- 📈 Shows a message if the guessed number is too high.
+- 🎉 Congratulates the player after the correct guess.
+- 🔢 Tracks the number of attempts taken to win the game.
+
+---
+
+## 🖥️ Project Preview
 
 ```
 +--------------------------------+
 |      🎯 Number Guessing Game    |
 |                                |
-|     Guess Number (1 - 100)     |
+|       Guess Number (1-100)     |
 |                                |
-|          [       ]             |
+|          [  Enter Number ]     |
 |                                |
-|          [ Check ]             |
+|            [ Check ]           |
 |                                |
-|     Your guess is too low      |
+|       Your guess is too low    |
 |                                |
 +--------------------------------+
 ```
 
 ---
 
-## 🚀 Features
-
-✨ Interactive GUI using Tkinter
-🎲 Random number generation from 1 to 100
-📉 Displays "Too Low" hint
-📈 Displays "Too High" hint
-🎉 Congratulates user on correct guess
-🔢 Counts number of attempts
-
----
-
 ## 🛠️ Technologies Used
 
-| Technology    | Purpose                      |
-| ------------- | ---------------------------- |
-| Python        | Core programming language    |
-| Tkinter       | Creating graphical interface |
-| Random Module | Generating secret number     |
+| Technology | Purpose |
+|------------|---------|
+| 🐍 Python | Core programming language |
+| 🖼️ Tkinter | Building graphical user interface |
+| 🎲 Random Module | Generating random numbers |
 
 ---
 
@@ -48,17 +53,19 @@ A simple and interactive **Number Guessing Game** built using **Python** and **T
 
 ```mermaid
 flowchart TD
-    A[Start Game] --> B[Generate Random Number 1-100]
-    B --> C[User Enters Guess]
-    C --> D{Is Guess Correct?}
 
-    D -- No, Too Low --> E[Show "Too Low"]
-    E --> C
+A(Start Game) --> B[Generate Random Number 1 to 100]
+B --> C[User Enters a Guess]
+C --> D{Is the Guess Correct?}
 
-    D -- No, Too High --> F[Show "Too High"]
-    F --> C
+D -- Too Low --> E[Show Low Hint]
+E --> C
 
-    D -- Yes --> G[Display Success Message & Attempts]
+D -- Too High --> F[Show High Hint]
+F --> C
+
+D -- Yes --> G[Display Congratulations Message]
+G --> H[Show Total Attempts]
 ```
 
 ---
@@ -68,27 +75,27 @@ flowchart TD
 ```
 Number-Guessing-Game/
 │
-├── game.py       # Main Python source code
-└── README.md     # Project documentation
+├── game.py        # Main Python code
+├── README.md      # Project documentation
 ```
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ Installation & Running
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
-git clone <your-repository-link>
+git clone https://github.com/your-username/Number-Guessing-Game.git
 ```
 
-### 2. Move to the project folder
+### 2️⃣ Navigate to project folder
 
 ```bash
 cd Number-Guessing-Game
 ```
 
-### 3. Run the Python file
+### 3️⃣ Run the Python file
 
 ```bash
 python game.py
@@ -96,24 +103,26 @@ python game.py
 
 ---
 
-## 🧠 Algorithm
+## 🧠 How It Works
 
-1. Generate a random number between 1 and 100.
-2. Take input from the user through the GUI.
-3. Compare the entered number with the secret number.
-4. Display whether the guess is low or high.
-5. Repeat until the correct number is guessed.
-6. Display the total attempts taken.
+1. The game starts by generating a secret random number.
+2. The player enters a number using the GUI.
+3. The program compares the guess with the secret number.
+4. The game provides hints:
+   - 📉 Too Low
+   - 📈 Too High
+5. The process repeats until the player guesses correctly.
+6. The total number of attempts is displayed.
 
 ---
 
-## 🔮 Future Enhancements
+## 🚀 Future Improvements
 
-* 🔄 Add a Reset Game button
-* 🎨 Improve GUI design and themes
-* ⏱️ Add a timer
-* 🏆 Add difficulty levels (Easy/Medium/Hard)
-* 💾 Save high scores
+- 🔄 Add a "Play Again" button.
+- 🎨 Improve GUI with better styling.
+- ⏳ Add a timer feature.
+- 🏆 Add difficulty levels.
+- 💾 Store high scores.
 
 ---
 
@@ -121,4 +130,4 @@ python game.py
 
 Developed with ❤️ using Python and Tkinter.
 
-⭐ If you like this project, don't forget to give it a star!
+⭐ If you liked this project, consider giving it a star on GitHub!
